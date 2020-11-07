@@ -96,7 +96,7 @@ window.addEventListener("load", function () {
             } else {
                 launchStatus.innerHTML = `Shuttle is ready for launch.`;
                 launchStatus.style.color = "green";
-                //This is added in case someone needed to add a couple more digits to either the fuel level or the cargo mass and resubmitted without reloading the page.  Otherwise, visibility would be 'visible.'
+                //This is added in case someone needed to fix either the fuel level or the cargo mass and resubmitted without reloading the page.  Otherwise, visibility would be 'visible.'
                 faultyItems.style.visibility = 'hidden';
                 return;
             };
