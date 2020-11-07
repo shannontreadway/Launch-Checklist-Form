@@ -74,7 +74,7 @@ window.addEventListener("load", function () {
         // Shuttle needs a cargo mass of less than 10000 for launch. This function checks to see if that is true.
         function cargoMassCheck(cargoMass) {
             if (cargoMass.value > 10000) {
-                cargoStatus.innerHTML = `Cargo mass is too high for launch`;
+                cargoStatus.innerHTML = `Cargo mass is too high for launch.`;
                 return false;
             } else {
                 cargoStatus.innerHTML = `Cargo mass is low enough for launch.`;
@@ -84,17 +84,17 @@ window.addEventListener("load", function () {
     
         function funcLaunchStatusCheck(fuelStatusCheck, cargoMassCheck) {
             //These template literals overwrite pilotStatus and copilotStatus in the HTML file.
-            pilotStatus.innerHTML = `Pilot ${pilotName.value} is ready for launch`;  
-            copilotStatus.innerHTML = `Co-pilot ${copilotName.value} is ready for launch`;
+            pilotStatus.innerHTML = `Pilot ${pilotName.value} is ready for launch.`;  
+            copilotStatus.innerHTML = `Co-pilot ${copilotName.value} is ready for launch.`;
             
             // If either the fuel level is too low or the cargo mass is too high, the shuttle is not ready for launch.  This if / else statement checks to see if the shuttle is ready for launch and informs the end user of its status.
             if (fuelStatusCheck === false || cargoMassCheck === false) {
-                launchStatus.innerHTML = `Shuttle not ready for launch`;
+                launchStatus.innerHTML = `Shuttle not ready for launch.`;
                 launchStatus.style.color = "red";
                 faultyItems.style.visibility = 'visible';
                 return;
             } else {
-                launchStatus.innerHTML = `Shuttle is ready for launch`;
+                launchStatus.innerHTML = `Shuttle is ready for launch.`;
                 launchStatus.style.color = "green";
                 //This is added in case someone needed to add a couple more digits to either the fuel level or the cargo mass and resubmitted without reloading the page.  Otherwise, visibility would be 'visible.'
                 faultyItems.style.visibility = 'hidden';
